@@ -5,12 +5,12 @@ from django.db import models
 class Author(models.Model):
 	name = models.CharField(max_length = 100)
 	def __str___(self):
-    		return self.name #returns Author
+    		return self.name
 	
 
 class Book(models.Model):
 	title = models.CharField(max_length = 100)
 	author = models.ForeignKey(Author, on_delete = models.CASCADE)
 	def __str___(self):
-        	return self.title #returns Book
+        	return self.title 
 
